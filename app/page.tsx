@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "@/Components/Header";
 import {Footer} from "@/Components/Footer";
 import { Carausal } from "@/Components/Carausal";

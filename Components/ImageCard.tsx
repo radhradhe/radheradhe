@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { Card } from '@/components/ui/card'
 import Imagenew from "../public/image.jpg"
+import { Card } from './ui/card'
 
 interface ImageCardProps {
   src: string
