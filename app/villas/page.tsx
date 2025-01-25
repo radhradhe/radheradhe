@@ -80,8 +80,8 @@ export default function villas() {
     <div>
       
     <section className="parlaxsection md:px-[20px]   newbackground">
-      <ParallaxText  baseVelocity={-1}><h1 className=" text-gray-800 md:text-[80px] text-[30px]">Your dream home is closer than you think</h1></ParallaxText>
-    <ParallaxText baseVelocity={1}><h1 className=" md:pt-[80px] pt-[40px] md:text-[180px] text-[60px]">Stay tuned for the unveiling</h1></ParallaxText>
+      <ParallaxText  baseVelocity={-1}><h1 className=" text-gray-800 md:text-[80px] text-[30px]">Your dream wedding with </h1></ParallaxText>
+    <ParallaxText baseVelocity={1}><h1 className=" md:pt-[80px] pt-[40px] md:text-[180px] text-[60px]">Radhe Radhe Rath baggi services</h1></ParallaxText>
     </section>
     <section  className="secondsection">
     </section>
