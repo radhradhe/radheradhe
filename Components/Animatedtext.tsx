@@ -1,3 +1,4 @@
+"use client"
 import { useEffect } from "react";
 import styled  from "styled-components"
 import { useAnimation, motion } from "framer-motion";
@@ -19,7 +20,7 @@ const Character = styled(motion.span)`
   margin-right: -0.05em;
 `;
 
-export default function AnimatedTitle() {
+export default function Animatedtext() {
   const text = 'Premium Wedding Rath Services in Haryana' // This would normally be passed into this component as a prop!
   
   const ctrls = useAnimation();
