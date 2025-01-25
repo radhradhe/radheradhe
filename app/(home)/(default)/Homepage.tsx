@@ -5,8 +5,6 @@
   import image1 from "../../assests/image1.jpeg";
   import image2 from "../../assests/image2.png";
   import image3 from "../..//assests/image3.jpeg";
-  import { Button } from "@/components/ui/button";
-  import { Input } from "@/components/ui/input";
   import { LinkedInLogoIcon } from "@radix-ui/react-icons";
   import { InstagramLogoIcon } from "@radix-ui/react-icons";
   import logofull from "../../../public/logonew1.png";
@@ -17,53 +15,15 @@
 
   import Navbar from "@/components/Navbar";
   import Gallery from "@/components/Gallery";
-  import {
-    EmailFormschemaType,
-  } from "@/app/dashboard/blog/schema";
-  import { useForm } from "react-hook-form";
-  import { IEmaildetail } from "@/lib/types";
+
   import { useTransition } from "react";
-  import {
-    Form,
-    FormControl,
-    FormItem,
-    FormField,
-    FormMessage,
-  } from "@/components/ui/form";
-  export default function Home({
-    onHandleSubmit,
-    defaultEmail,
-  }: {
-    defaultEmail: IEmaildetail;
-    onHandleSubmit: (data: EmailFormschemaType) => void;
-  }) {
-    const [isPending, startTransition] = useTransition();
+  export default function Home() {
     const [isDesktop, setIsDesktop] = useState(false);
 
 
-    // Regular expression for email validation
+   
 
-    const form = useForm<EmailFormschemaType>({
-      mode: "all",
-      // resolver: zodResolver(EmailFormschema),
-
-      defaultValues: {
-        email: defaultEmail?.email || "",
-      },
-    });
-
-    const onSubmit = (data: EmailFormschemaType) => {
-      console.log(data);
-      startTransition(() => {
-        onHandleSubmit(data);
-      });
-    };
-    useEffect(() => {
-      if (form.getValues().email) {
-        form.setValue("created_at", new Date().toISOString().slice(0, 16));
-      }
-    }, [form.getValues().email]);
-
+  
     const controls = useAnimation();
 
     // Run the intro fade-in and then animation sequence
@@ -139,55 +99,33 @@
             </motion.p>
 
             {/* Email Input */}
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)}>
+
+        
+
+
+        
                 <div className="md:pt-[55px] pt-[42px]  md:pl-[8px] ">
                   <div className="md:w-[750px] w-[350px] md:mt-[10px] py-1  px-1 mx-auto border border-[#7A7979] rounded-full flex items-center     ">
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => {
-                        return (
-                          <FormItem>
-                            <FormControl>
-                              <div className="justify-between">
-                              {/* {form.getFieldState("email").invalid &&
-                              form.getValues().email && (
-                                <div className="text-red-400">
-                                <FormMessage />
-                              </div>
-                              )} */}
-                                <Input
+                 
+                  
+                  <input
                                 
-                                  placeholder="Enter your email address"
-                                  {...field}                       
-                                  className=" md:w-[550px] pt-[4px] bg-transparent  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[18px] py-1"
-                                />
-                              </div>
-                            </FormControl>
-
-                          
-                          </FormItem>
-                        );
-                      }}
-                    />
-
-                    <Button
+                                placeholder="Enter your email address"
+                                className=" md:w-[550px] pt-[4px] bg-transparent  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[18px] py-1"
+                              />
+                    <button
                       role="button"
                       type="submit"
-                      variant="default"
                       // disabled={!form.formState.isValid}
                       className="bg-[#4C2B21] disabled:bg-[#4C2B21] disabled:opacity-95 font-gilroy hover:shadow-xl shadow-gray-700 ml-[80px]  md:ml-[34px]  text-[8px]  md:text-[24px]  text-white py-2 md:py-[25px] rounded-full hover:bg-brown-800"
                     >
                       <p className="font-gilroy_medium md:pt-0 pt-[2px] md:pr-0 pl-[1px] text-[11px] md:text-[20px]">
                         Notify Me
                       </p>
-                    </Button>
+                    </button>
                   </div>
                 </div>
-              </form>
-            </Form>
-
+           
             <div
               id="calling"
               className=" md:pt-[55px] pt-[24px] md:pl-[6px] cursor-pointer hover:text-[#4C2B21]  mb-[15px]"

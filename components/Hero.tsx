@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '@/app/navbar/navbar';
 import Image from 'next/image';
 import hardware from "../public/invest.jpeg"
 // import hardware from "../public/hardware.png"

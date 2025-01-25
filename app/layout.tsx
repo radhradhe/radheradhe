@@ -1,7 +1,5 @@
 import "./global.css"
 import { ThemeProvider } from '@/components/theme-provider'
-import Sessioprovider from '@/components/session-provider'
-import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 const defaultUrl = process.env.VERCEL_URL
@@ -45,8 +43,6 @@ export default function RootLayout({
          
           {children}
           </ThemeProvider>
-          <Toaster />
-          <Sessioprovider/>
       </body>
     </html>
   )

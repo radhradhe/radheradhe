@@ -1,7 +1,6 @@
 // components/ThankYouPage.tsx
 "use client"
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 
 
 const ThankYouPage: React.FC = () => {
@@ -37,13 +36,12 @@ const ThankYouPage: React.FC = () => {
         <p className="text-lg text-gray-600">
           We  will Notify when we will ready.
         </p>
-        <Button
+        <button
           className="mt-6 px-6 py-2  font-semibold  "
           onClick={() => (window.location.href = "/")}
-          variant="outline"
         >
           Go Home
-        </Button>
+        </button>
       </div>
     </div>
   );
