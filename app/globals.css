@@ -1,7 +1,195 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Charter&display=swap');
+ 
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
 }
+.contentclass:img{
+  border-radius: 50%;
+  width: 50%;
+}
+
+/* pre{
+  margin-top: 10px;
+  padding: 400px;
+  box-sizing: border-box;
+	width: 100%;
+	overflow: auto;
+	line-height: 20px;
+	background: #193549;
+  font-size: 0.7em;  
+	padding: 10px;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 2px;
+
+} */
+
+pre{
+ 
+	overflow: auto;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 2px;
+
+}
+img{
+  background: cover;
+}
+iframe{
+  display: flex;
+  width: 780px;
+  height: 450px;
+}
+
+/* @media print {
+	pre {
+		overflow-x: auto;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap !important;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
+		background: #fff;
+	}
+} */
+
+
+.ql-syntax{
+  padding: 20px;
+}
+
+
+p{
+ font-family: 'Charter', serif;
+}
+
+.ql-size-large{
+ font-size: 20px;
+}
+
+
+.bg-gradient-to-ra {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-from-yellow-400 {
+  --tw-gradient-stops: #fbbf24, #f87171;
+}
+
+.bg-gradient-from-green-400 {
+  --tw-gradient-stops: #34d399, #60a5fa;
+}
+
+.bg-gradient-from-blue-400 {
+  --tw-gradient-stops: #60a5fa, #a78bfa;
+}
+
+.bg-gradient-from-orange-400 {
+  --tw-gradient-stops: #fb923c, #f87171;
+}
+
+.bg-gradient-to-ra {
+  background: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-from-purple-400 {
+  --tw-gradient-stops: #a78bfa, #818cf8;
+}
+
+.bg-gradient-from-teal-500 {
+  --tw-gradient-stops: #2dd4bf, #3b82f6;
+}
+
+.bg-gradient-from-pink-500 {
+  --tw-gradient-stops: #ec4899, #f87171;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@layer utilities {
+  @keyframes glow {
+    0%, 100% { color: #ffffff; text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff99cc, 0 0 15px #ff99cc; }
+    50% { color: #ff99cc; text-shadow: 0 0 15px #ff99cc, 0 0 20px #ff99cc, 0 0 25px #ff99cc; }
+  }
+
+  .glow {
+    animation: glow 1s ease-in-out infinite;
+  }
+}
+
+/* Importing font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* In your globals.css or styles.css file */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GilroyBold';
+  src: url('./fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyMedium';
+  src: url('./fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'GilroyLight';
+  src: url('./fonts/Gilroy-Light.ttf') format('truetype');
+}
+
+
