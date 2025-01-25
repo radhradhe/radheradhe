@@ -1,18 +1,16 @@
-import { GeistSans } from 'geist/font/sans'
-import './globals.css'
+import "./global.css"
 import { ThemeProvider } from '@/components/theme-provider'
 import Sessioprovider from '@/components/session-provider'
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Navbar from '@/components/Navbar';
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : 'http://localhost:3000'
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: 'Home finderr',
+  title: 'Radhe Radhe',
   description: 'The fastest way to find homes in Goa',
 }
 
@@ -44,7 +42,7 @@ export default function RootLayout({
               <Analytics/>
               <SpeedInsights/>
             </main>
-            <Navbar/>
+         
           {children}
           </ThemeProvider>
           <Toaster />

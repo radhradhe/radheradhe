@@ -4,7 +4,13 @@ import { SITE_URL } from "@/app/config";
 import supabase from "@/utils/supabase/supabase";
 import "react-quill/dist/quill.snow.css";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export async function generateMetadata({ params }: PageProps) {
   try {
     const { data, error } = await supabase
       .from("blog")
@@ -15,9 +21,9 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     if (error) {
       console.error("Error fetching blog metadata:", error);
       return {
-        title: "Error | Hardware Garage",
+        title: "Error | radhe radhe ",
         openGraph: {
-          title: "Error | Hardware Garage",
+          title: "Error | radhe Garage",
           url: `${SITE_URL}blog/${params.id}`,
           siteName: "Hardware Garage",
           type: "website",
@@ -52,7 +58,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   }
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: PageProps) {
   let blog = null;
   let authorData = null;
 

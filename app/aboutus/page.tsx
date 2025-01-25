@@ -1,6 +1,7 @@
 "use client"
 import "./style.css";
 import { useRef } from "react";
+import Navbar from "@/components/Navbar";
 import {
   motion,
   useScroll,
@@ -63,7 +64,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * dynamically generated number of children.
    */
   return (
-    <div className="parallax md:px-[20px] text-[900px] newbackground">
+
+
+<div className="parallax md:px-[20px] text-[900px] newbackground">
       <motion.div className="scroller " style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
@@ -71,14 +74,26 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         <span>{children} </span>
       </motion.div>
     </div>
+
+    
+
   );
 }
 
 export default function aboutus() {
   return (
-    <section className="parlaxsection md:px-[20px]   newbackground">
-     <ParallaxText  baseVelocity={-1}><h1 className=" text-gray-800 md:text-[80px]   text-[30px]">Home Finderr</h1></ParallaxText>
-    <ParallaxText baseVelocity={1}><h1 className=" md:pt-[80px] pt-[40px] md:text-[180px] text-[60px]">Coming Soon</h1></ParallaxText>
+
+    <div>
+
+      <Navbar/>
+
+
+<section className="parlaxsection md:px-[20px]   newbackground">
+     <ParallaxText  baseVelocity={-1}><h1 className=" text-gray-800 md:text-[80px]   text-[30px]">Radhe Radhe</h1></ParallaxText>
+    <ParallaxText baseVelocity={1}><h1 className=" md:pt-[80px] pt-[40px] md:text-[180px] text-[60px]">Rath and baggis</h1></ParallaxText>
     </section>
+
+    </div>
+  
   );
 }

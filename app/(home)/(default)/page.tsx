@@ -66,7 +66,7 @@ export default function CreateForm() {
 
 	return (
 		<div>
-			<Home onHandleSubmit={onHandleSubmit} defaultEmail={defaultEmail} />
+			<Home  onHandleSubmit={onHandleSubmit} defaultEmail={defaultEmail} />
 		</div>
 	);
 }

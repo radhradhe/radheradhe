@@ -2,16 +2,18 @@
   import { useEffect } from "react";
   import { motion, useAnimation } from "framer-motion";
   import Image from "next/image";
-  import image1 from "../../assests/ImageItem.jpg";
-  import image2 from "../../assests/ImageItem 2.jpg";
-  import image3 from "../..//assests/image3.png";
+  import image1 from "../../assests/image1.jpeg";
+  import image2 from "../../assests/image2.png";
+  import image3 from "../..//assests/image3.jpeg";
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
   import { LinkedInLogoIcon } from "@radix-ui/react-icons";
   import { InstagramLogoIcon } from "@radix-ui/react-icons";
-  import logofull from "../../assests/Logo_full.png";
+  import logofull from "../../../public/logonew1.png";
   import AnimatedTitle from "@/components/Animatedtext";
   import { useState, ChangeEvent } from "react";
+  import Navbar from '@/components/Navbar';
+  import Gallery from "@/components/Gallery";
   import {
     EmailFormschemaType,
   } from "@/app/dashboard/blog/schema";
@@ -108,19 +110,20 @@
     }, [controls]);
 
     return (
-      <div className="relative min-h-screen bg-white text-gray-800">
+      <div className="relative   backgroundimagenew text-gray-800">
+        <Navbar />
         <div>
           <main className="text-center md:py-10 py-2 px-4 md:px-20">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 1 }}
-              className=" text-[20px] pt-[34px] md:pt-[2px] pl-[10px]  gilroy_medium md:text-[38px] "
+              className="  text-gray-600 text-[20px] pt-[34px] md:pt-[2px] pl-[10px]  gilroy_medium md:text-[38px] "
             >
               We make You weeding perfect
             </motion.h1>
 
-            <div className="text-[40px] md:text-[130px] font-gilroy_bold text-shadow-lg  text-black">
+            <div className=" font-gilroy_bold text-shadow-lg  text-gray-600">
               <AnimatedTitle />
             </div>
             <motion.p
@@ -129,7 +132,7 @@
               transition={{ delay: 0.2, duration: 1 }}
               className="text-[#403D3D] font-gilroy text-[20px]  md:text-[25px]  text-sm md:font-[28px] pt-[20px]  md:pt-[35px]"
             >
-              "Stay tuned for the ultimate property search experience"
+              "Stay tuned for the ultimate Weeding Rath experience"
             </motion.p>
 
             {/* Email Input */}
@@ -155,7 +158,7 @@
                                 
                                   placeholder="Enter your email address"
                                   {...field}                       
-                                  className=" md:w-[550px] pt-[4px] bg-white  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[18px] py-1"
+                                  className=" md:w-[550px] pt-[4px] bg-transparent  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[18px] py-1"
                                 />
                               </div>
                             </FormControl>
@@ -190,11 +193,11 @@
                 <div className="text-[#2d2c2c] md:pl-[13px] md:text-2xl text-[14px] font-normal font-gilroy_medium">
                 {isDesktop ? (
           <a href="https://wa.me/919873344942" target="_blank" rel="noopener noreferrer">
-            Call/WhatsApp us at +91 9873344942{" "}
+            Call/WhatsApp us at +91 9728024589{" "}
           </a>
         ) : (
           <a href="tel:+919873344942">
-            Call/WhatsApp us at +91 9873344942{" "}
+            Call/WhatsApp us at +91 9728024589{" "}
           </a>
         )}
                   
@@ -205,19 +208,17 @@
         </div>
 
         {/* Section with Villas */}
-        <section className="px-[30px] py-4 text-center md:mt-[60px] md:pt-[85px] pt-[55px] pb-[50px] md:px-20 bg-[#FBF8F4] ">
+        <section className="px-[30px] py-4 text-center md:mt-[0px] md:pt-[85px] pt-[55px] pb-[50px] md:px-20 bg-[#FBF8F4] ">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-2xl md:text-5xl font-gilroy_medium mb-[44px]"
+            className="text-2xl md:text-5xl text-gray-700 font-gilroy_medium mb-[44px]"
           >
-            Luxury Living in the Heart of Goa
+            Luxury Raths to blend modern touch  in the Hearts
           </motion.h2>
           <p className="max-w-xl md:text-xl  text-[14px] font-gilroy mx-auto mb-[52px] text-gray-600">
-            Discover the perfect blend of modern comforts and tropical charm at
-            Goa Villas. Our premium villas are designed to provide you with an
-            unparalleled living experience.
+          Make your wedding day truly unforgettable with our Rath Services in Deoria. Arrive in style and elegance aboard our beautifully adorned chariots, customized to reflect your unique vision. 
           </p>
 
           {/* Villa Images */}
@@ -226,9 +227,9 @@
               <Image
                 src={image1}
                 alt="Villa 1"
-                width={368}
-                height={724}
-                className=""
+                width={500}
+                height={600}
+                className=" object-cover rounded-lg"
               />
             </motion.div>
 
@@ -236,9 +237,9 @@
               <Image
                 src={image2}
                 alt="Villa 2"
-                width={368}
-                height={724}
-                className="object-cover"
+                width={500}
+                height={600}
+                className="object-cover rounded-lg"
               />
             </motion.div>
 
@@ -249,13 +250,16 @@
               <Image
                 src={image3}
                 alt="Villa 3"
-                width={368}
-                height={724}
-                className="object-cover"
+                width={500}
+                height={600}
+                className="object-cover  rounded-lg"
               />
             </motion.div>
           </div>
         </section>
+
+
+      <Gallery />
 
         <footer className="bg-[#FBF8F4]  md:pr-[140px]  md:px-[20px] md:pt-[10px] border-t border-gray-300">
 
@@ -274,20 +278,20 @@
                 Follow us on -
               </span>
               <a
-                className=" md:text-2xl "
+                className=" md:text-4xl text-black "
                 href="https://www.instagram.com/homefinderr.in?igsh=MXo4eHc4Z200OXJ4&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <InstagramLogoIcon width={24} height={24} />
+                <InstagramLogoIcon width={44} height={44} />
               </a>
               <a
-                className=" md:text-2xl "
+                className=" md:text-4xl text-black "
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <LinkedInLogoIcon width={24} height={24} />
+                <LinkedInLogoIcon width={44} height={44} />
               </a>
             </div>
 
@@ -301,10 +305,10 @@
            <div>
            <a
                 target="blank"
-                href="mailto:homefinderr@gmail.com"
+                href="mailto:rathbaggiradheradhe@gmail.com"
                   className="md:text-xl md:ml-[20px]"
               >
-                Homefinderr@gmail.com
+                rathbaggiradheradhe@gmail.com
               </a>
            </div>
             </div>
@@ -313,7 +317,7 @@
           <div className="flex border-t px-[25px] justify-center  md:px-[90px] py-[10px] md:py-[20px] bg-[#FBF8F4] ">
           
           <div className=" bg-[#FBF8F4] md:ml-[80px] justify-center items-center text-[12px]  float-right md:text-[16px]  py-2   md:pr-[36px] pr-[16px] md:text-sm    md:px-[86px] border-gray-300 md:pt-10  text-[#3F3E3E] ">
-            Homefinderr©copyright2024 All Rights Reserved.
+            Radhe Radhe©copyright2024 All Rights Reserved.
           </div>
         </div>
         </footer>

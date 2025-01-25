@@ -20,7 +20,7 @@ const Character = styled(motion.span)`
 `;
 
 export default function AnimatedTitle() {
-  const text = 'Premium Wedding Rath Services In Haryana' // This would normally be passed into this component as a prop!
+  const text = 'Premium Wedding Rath Services in Haryana' // This would normally be passed into this component as a prop!
   
   const ctrls = useAnimation();
   
@@ -81,7 +81,7 @@ export default function AnimatedTitle() {
                   key={index}
                   variants={characterAnimation}
                 >
-                    <div className="text-[48px] md:pt-0 pt-[24px] md:text-[130px] font-gilroy_bold text-shadow-lg  text-black">
+                    <div className="text-[40px] md:pt-0 pt-[24px] md:text-[95px] font-gilroy_bold text-shadow-lg   text-gray-900">
 
                   {character}
                     </div>

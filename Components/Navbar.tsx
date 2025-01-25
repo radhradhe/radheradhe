@@ -3,7 +3,7 @@ import React, { useState, MouseEvent } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import image from "../app/assests/Logo-Brown_Instagram.jpg";
+import image from "../public/logonew1.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -40,10 +40,10 @@ function Navbar() {
             <Link href="/">Home</Link>
           </div>
           <div className={`text-[24px] font-gilroy font-normal leading-none ${pathname === '/aboutus' ? 'text-black ' : 'text-gray-700 hover:text-gray-600'}`}>
-            <Link href="/aboutus">About us</Link>
+            <Link href="/aboutus">Gallery</Link>
           </div>
           <div className={`text-[24px] font-gilroy font-normal leading-none ${pathname === '/villas' ? 'text-black ' : 'text-gray-700 hover:text-gray-600'}`}>
-            <Link href="/villas">Villas</Link>
+            <Link href="/villas">Services</Link>
           </div>
         </div>
 
@@ -68,10 +68,10 @@ function Navbar() {
               <Link href="/">Home</Link>
             </div>
             <div className={`${pathname === '/aboutus' ? 'text-black ' : 'text-gray-700 hover:text-gray-600'} text-xl font-gilroy font-normal leading-none`} onClick={toggleMenu}>
-              <Link href="/aboutus">About us</Link>
+              <Link href="/aboutus">Gallery</Link>
             </div>
             <div className={`${pathname === '/villas' ? 'text-black ' : 'text-gray-700 hover:text-gray-600'} text-xl font-gilroy font-normal leading-none`} onClick={toggleMenu}>
-              <Link href="/villas">Villas</Link>
+              <Link href="/villas">Services</Link>
             </div>
             <div
               className="bg-[#4c2b21]  text-white text-xl font-gilroy_medium font-normal rounded-[11px] hover:bg-[#3e2a1d] transition duration-200 py-2 px-4"
