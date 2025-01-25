@@ -111,13 +111,13 @@
                   <input
                                 
                                 placeholder="Enter your email address"
-                                className=" md:w-[550px] pt-[4px] bg-transparent  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[18px] py-1"
+                                className=" md:w-[550px] pt-[4px] bg-transparent  placeholder-black md:text-[21px] text-[12px] font-gilroy  text-black  mx-4 border-none md:my-2 md:py-[10px] py-1"
                               />
                     <button
                       role="button"
                       type="submit"
                       // disabled={!form.formState.isValid}
-                      className="bg-[#4C2B21] disabled:bg-[#4C2B21] disabled:opacity-95 font-gilroy hover:shadow-xl shadow-gray-700 ml-[80px]  md:ml-[34px]  text-[8px]  md:text-[24px]  text-white py-2 md:py-[25px] rounded-full hover:bg-brown-800"
+                      className="bg-[#4C2B21]  disabled:opacity-95 font-gilroy hover:shadow-xl shadow-gray-700 ml-[80px]  md:ml-[18px]  text-[8px]  md:text-[24px]  text-white py-2 md:py-[12px] px-4 rounded-full hover:bg-brown-800"
                     >
                       <p className="font-gilroy_medium md:pt-0 pt-[2px] md:pr-0 pl-[1px] text-[11px] md:text-[20px]">
                         Notify Me
